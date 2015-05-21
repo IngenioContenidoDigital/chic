@@ -103,5 +103,18 @@ ul.bjqs-controls.v-centered li a:hover{
     cursor:pointer;
 }
 
+.activo{border:solid #FFF 1px;}
+
 #menu-women{visibility: hidden;}
 #menu-men{visibility: hidden;}
+
+.cliente{
+    display:block;
+    margin-bottom: 30px;
+}
+
+.cliente img{
+    width:60px;
+    height:60px;
+    margin: 10px;
+}

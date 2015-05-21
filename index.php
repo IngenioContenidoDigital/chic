@@ -181,68 +181,16 @@ Desarrollamos sus ideas desde la creación, diseño y ejecución con nuestro Sta
                             <div class="col-md-12 text-center" style="background-image: url(images/fondo.jpg)">
                                 <h4><div>CLIENTES</div></h4>
                                 <div class="divider"><i class="fa fa-bookmark"></i></div>
-                                <table width="100%" border="0" align="center">
-                                  <tr>
-                                    <td>
-                                        <ul class="grid cs-style-5">
-                                            <figure>
-                                                <img src="images/Clientes/Client1.jpg" width="100" height="100" >
-                                            </figure>
-                                        </ul>
-                                   </td>
-                                   <td>
-                                       <ul class="grid cs-style-5">
-                                           <figure>
-                                               <img src="images/Clientes/Client2.jpg" width="100" height="100" >
-                                           </figure>
-                                        </ul>
-                                   </td>
-                                   <td>
-                                       <ul class="grid cs-style-5">
-                                           <figure>
-                                               <img src="images/Clientes/Client3.jpg" width="100" height="100" >
-                                           </figure>
-                                        </ul>
-                                   </td>
-                                   <td>
-                                       <ul class="grid cs-style-5">
-                                           <figure>
-                                               <img src="images/Clientes/Client4.jpg" width="100" height="100" >
-                                           </figure>
-                                        </ul>
-                                   </td>
-                                 <tr>  
-                                    <td>
-                                        <ul class="grid cs-style-5">
-                                            <figure>
-                                                <img src="images/Clientes/Client5.jpg" width="100" height="100" >
-                                            </figure>
-                                        </ul>
-                                   </td>
-                                   <td>
-                                       <ul class="grid cs-style-5">
-                                           <figure>
-                                               <img src="images/Clientes/Client6.jpg" width="100" height="100" >
-                                           </figure>
-                                        </ul>
-                                   </td>
-                                   <td>
-                                       <ul class="grid cs-style-5">
-                                           <figure>
-                                               <img src="images/Clientes/Client7.jpg" width="100" height="100" >
-                                           </figure>
-                                        </ul>
-                                   </td>
-                                   <td>
-                                       <ul class="grid cs-style-5">
-                                           <figure>
-                                               <img src="images/Clientes/Client8.jpg" width="100" height="100" >
-                                           </figure>
-                                       </ul>
-                                   </td>
-                                   </tr>
-                                  </tr>
-                                </table>
+                                <div class="cliente">
+                                    <img src="images/Clientes/Client1.jpg" />
+                                    <img src="images/Clientes/Client2.jpg" />
+                                    <img src="images/Clientes/Client3.jpg" />
+                                    <img src="images/Clientes/Client4.jpg" />
+                                    <img src="images/Clientes/Client5.jpg" />
+                                    <img src="images/Clientes/Client6.jpg" />
+                                    <img src="images/Clientes/Client7.jpg" />
+                                    <img src="images/Clientes/Client8.jpg" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -267,12 +215,25 @@ Desarrollamos sus ideas desde la creación, diseño y ejecución con nuestro Sta
 				<div class="row wow fadeInUpBig" data-wow-delay="0.5s">
                                     <div class="col-md-12 text-center">
                                         <ul class="filter-menu">
-                                        	<!--
-                                            <li id="todos" class="filter btn btn-default active" data-filter="mix" id="all">TODOS</li>
-                                            -->
-                                            <li class="filter btn btn-default" data-filter="hombre" id="men">HOMBRES</li>
-                                            <li class="filter btn btn-default"  data-filter="mujer" id="women">MUJERES</li>
+                                            <li id="todos" class="filter btn btn-default active" >TODOS</li>
+                                            <li class="filter btn btn-default"  id="men">HOMBRES</li>
+                                            <li class="filter btn btn-default" id="women">MUJERES</li>
                                         </ul>
+                                        <div style="display: inline-block; text-align: center; width:100%; height:25px; margin-bottom: 50px;" id="menu-todos">
+                                            <div id="btn-1" class="boton-prueba">1</div>
+                                            <div id="btn-2" class="boton-prueba">2</div>
+                                            <div id="btn-3" class="boton-prueba">3</div>
+                                            <div id="btn-4" class="boton-prueba">4</div>
+                                            <div id="btn-5" class="boton-prueba">5</div>
+                                            <div id="btn-6" class="boton-prueba">6</div>
+                                            <div id="btn-7" class="boton-prueba">7</div>
+                                            <div id="btn-8" class="boton-prueba">8</div>
+                                            <div id="btn-9" class="boton-prueba">9</div>
+                                            <div id="btn-10" class="boton-prueba">10</div>
+                                            <div id="btn-11" class="boton-prueba">11</div>
+                                            <div id="btn-12" class="boton-prueba">12</div>
+                                            <div id="btn-13" class="boton-prueba">13</div>
+                                        </div>
                                         <div style="display: inline-block; text-align: center; width:100%; height:25px; margin-bottom: 50px;" id="menu-women">
                                             <div id="btn-1" class="boton-prueba">1</div>
                                             <div id="btn-2" class="boton-prueba">2</div>
@@ -752,11 +713,69 @@ if (!isset($_POST["submit"])) {
         <script>
             $("#ctl-staff").click(function(){
                $("#menu-women").hide(); 
+               $("#menu-men").hide();
+                $('#men').css('border','1px solid #704b80');
+                $('#women').css('border','1px solid #704b80');
+                $("#menu-women").hide("slow");
+                $("#menu-men").hide("slow");
+                $("#menu-todos").css("visibility","visible");
+                $("#menu-todos").show("slow");
+                Seleccion('btn-1');
+                $(".boton-prueba").removeClass('activo');
+                $('#btn-1').addClass('activo');
             });
             
             $(".boton-prueba").click(function(){
-                var id = $(this).attr("id");
-                switch (id){
+                Seleccion($(this).attr("id"));
+                $(".boton-prueba").removeClass('activo');
+                $(this).addClass('activo');
+            });
+            
+            $('#todos').click(function(){
+                $(this).css('border','1px solid #fff');
+                $('#men').css('border','1px solid #704b80');
+                $('#women').css('border','1px solid #704b80');
+                $("#menu-women").hide("slow");
+                $("#menu-men").hide("slow");
+                $("#menu-todos").css("visibility","visible");
+                $("#menu-todos").show("slow");
+                Seleccion('btn-1');
+                $(".boton-prueba").removeClass('activo');
+                $('#btn-1').addClass('activo');
+            }); 
+            
+            $('#women').click(function(){
+                $(this).css('border','1px solid #fff');
+                $('#men').css('border','1px solid #704b80');
+                $('#todos').css('border','1px solid #704b80');
+                $("#menu-todos").css("visibility","hidden");
+                $("#menu-todos").hide();
+                $("#menu-men").css("visibility","hidden");
+                $("#menu-men").hide();
+                $("#menu-women").css("visibility","visible");
+                $("#menu-women").show("slow");
+                Seleccion('btn-1');
+                $(".boton-prueba").removeClass('activo');
+                $('#btn-1').addClass('activo');
+            });
+            
+            $('#men').click(function(){
+                $(this).css('border','1px solid #fff');
+                $('#women').css('border','1px solid #704b80');
+                $('#todos').css('border','1px solid #704b80');
+                $("#menu-todos").css("visibility","hidden");
+                $("#menu-todos").hide();
+                $("#menu-women").css("visibility","hidden");
+                $("#menu-women").hide();
+                $("#menu-men").css("visibility","visible");
+                $("#menu-men").show("slow");
+                Seleccion('btn-11');
+                $(".boton-prueba").removeClass('activo');
+                $('#btn-11').addClass('activo');
+            });
+            
+            function Seleccion(val){
+                switch (val){
                     case 'btn-1':
                         inicio =0;
                         fin = 5;
@@ -820,27 +839,7 @@ if (!isset($_POST["submit"])) {
                         $(this).show();
                     }
                });
-            })
-            
-            $('#todos').click(function(){
-                $("#menu-women").hide("slow");
-                $("#menu-men").hide("slow");
-            });
-            
-            $('#women').click(function(){
-                $("#menu-men").css("visibility","hidden");
-                $("#menu-men").hide();
-                $("#menu-women").css("visibility","visible");
-                $("#menu-women").show("slow");
-            });
-            
-            $('#men').click(function(){
-                $("#menu-women").css("visibility","hidden");
-                $("#menu-women").hide();
-                $("#menu-men").css("visibility","visible");
-                $("#menu-men").show("slow");
-            });
-            
+            }
             
         </script>    
 	</body>
