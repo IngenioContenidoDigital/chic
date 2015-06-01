@@ -28,7 +28,7 @@
             <meta name="description" content="" />
             <meta name="keywords" content="" />
             <meta name="author" content="Codrops" />
-            <link rel="shortcut icon" href="file:///C|/xampp/htdocs/favicon.ico"> 
+            <link rel="shortcut icon" href="file:images/ico2.gif"> 
             <link rel="stylesheet" type="text/css" href="css/default.css" />
             <link rel="stylesheet" type="text/css" href="css/component.css" />
             
@@ -126,21 +126,13 @@
 	<!-- ========== BANNER START ========== -->
         
         <div id="banner">
-        <!--
-            <div class="video">
-                <video width="400" height="250" loop autoplay>
-                      <source src="videos/video.mp4" type="video/mp4">
-                      <source src="videos/video.ogg" type="video/ogg">
-                    Plugin no soportado
-                </video>
-            </div>
-            -->
             <div class="slides-container">
-                <img src="images/banner1.jpg" alt="" />
-                <img src="images/banner2.jpg" alt="" />
+                <li><img src="images/banner1.jpg" class="bjqs"/></li>
+                <li><img src="images/banner2.jpg" class="bjqs"/></li>
                 <img src="images/banner3.jpg" alt="" />
                 <img src="images/banner4.jpg" alt="" />
             </div>
+            
             <div class="tint">
                 <p><a href="#about" class="btn btn-default btn-lg">NAVEGAR</a></p>
                 <div class="welcome text-center">
@@ -439,6 +431,22 @@ desarrollo del Stand.<small>Stands</small></p>
 					</div>
 				</div>
 				<div class="row-margin owl-carousel">
+                
+                <div class="item">
+						<div class="post-thumb col-sm-4">
+							<img src="images/eventos/gran salon inmobiliario/31.jpg" alt="Banner" class="img-responsive" />
+						</div>
+						<div class="post col-sm-8">
+							<h3 class="entry-title"> IX GRAN SALON INMOBILIARIO</h3>
+							<div class="entry-meta"><span class="date">Octubre 08 al 10 de 2014</span></div>
+							<div class="entry-content">
+								<p style="text-align: justify;">Una vez mas la agencia hace parte de esta gran feria en corferias donde están los proyectos inmobiliarios mas innovadores del país, nuestro staff de protocolo con modelos hostess y performance con DJ y saxo para ambientar los stands. Una combinacíon exitosa para atraer al mercado objetivo de esta vitrina de negocios.</p>
+							</div>
+							<div class="post-more">
+								<a href="Gran Salon Inmobiliario.html" class="btn btn-default">VER</a>
+							</div>
+						</div>
+					</div>
 
 					<div class="item">
 						<div class="post-thumb col-sm-4">
@@ -590,14 +598,14 @@ if (!isset($_POST["submit"])) {
   <?php 
 } else {    
 
-  if (isset($_POST["from"])) {
+  if (isset($_POST["submit"])) {
     $from = $_POST["from"]; 
     $subject = $_POST["subject"];
     $message = $_POST["message"];
     
     $message = wordwrap($message, 70);
     
-    mail("chic.performance@gmail.com",$subject,$message,"From: $from\n");
+    mail("daniel.quinones@ingeniocontenido.co",$subject,$message,"From: $from\n");
     echo "Gracias por contactarnos";
   }
 }
