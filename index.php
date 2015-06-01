@@ -1,83 +1,74 @@
 <!DOCTYPE html>
 <html>
-	<head>
-            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-            <script>
-                
-                function initialize() {
-                  var myLatlng = new google.maps.LatLng(4.696490240756579,-74.07622996693419);
-                  var mapOptions = {
-                    zoom: 16,
-                    center: myLatlng
-                  }
-                  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    <head>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+        <script>       
+            function initialize() {
+              var myLatlng = new google.maps.LatLng(4.696490240756579,-74.07622996693419);
+              var mapOptions = {
+                zoom: 16,
+                center: myLatlng
+              }
+              var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-                  var marker = new google.maps.Marker({
-                      position: myLatlng,
-                      map: map,
-                      title: 'Chic Performance'
-                  });
-                }
-                google.maps.event.addDomListener(window, 'load', initialize);
-            </script>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-            <meta name="description" content="">
-            <meta name="author" content="">
-            <title>Chic Performance</title>
-            <meta name="description" content="" />
-            <meta name="keywords" content="" />
-            <meta name="author" content="Codrops" />
-            <link rel="shortcut icon" href="file:images/ico2.gif"> 
-            <link rel="stylesheet" type="text/css" href="css/default.css" />
-            <link rel="stylesheet" type="text/css" href="css/component.css" />
+              var marker = new google.maps.Marker({
+                  position: myLatlng,
+                  map: map,
+                  title: 'Chic Performance'
+              });
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="description" content="Desarrollado por www.ingeniocontenido.co para Chichperformance">
+        <meta name="author" content="www.ingeniocontenido.co">
+        <title>Chic Performance</title>
             
-            <script src="js/modernizr.custom.js"></script>
-            <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-            <script src="js/jPaginate.js"></script>
+        <link rel="shortcut icon" href="file:images/ico2.gif"> 
+        <link rel="stylesheet" type="text/css" href="css/default.css" />
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+        
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/modernizr.custom.js"></script>
+        <script src="js/jPaginate.js"></script>
             
-            <!-- Incluimos el plugin -->
-            <script src="bjqs.min.js"></script>
-            <script src="script.js"></script>
-            <link rel="shortcut icon" href="images/favicon.html">
+        <script src="bjqs.min.js"></script>
+        <script src="script.js"></script>
+        <link rel="shortcut icon" href="images/favicon.html">
             
-            <!-- Bootstrap -->
-            <link href="css/bootstrap.min.css" rel="stylesheet">
-            <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
             
-            <!-- Custom CSS -->
-            <link href="css/style.css" rel="stylesheet">
-            <link rel="stylesheet" href="js/rs-plugin/css/settings.css" type="text/css"/>
+        <!-- Custom CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="js/rs-plugin/css/settings.css" type="text/css"/>
             
-            <!-- Superslides CSS -->
-            <link href="css/superslides.css" rel="stylesheet">
+        <!-- Superslides CSS -->
+        <link href="css/superslides.css" rel="stylesheet">
             
-            <!-- Owl Carousel stylesheets -->
-            <link href="css/owl.carousel.css" rel="stylesheet">
-            <link href="css/owl.theme.css" rel="stylesheet">
+        <!-- Owl Carousel stylesheets -->
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link href="css/owl.theme.css" rel="stylesheet">
             
-            <!-- Fancybox -->
-            <link href="css/jquery.fancybox.css" rel="stylesheet">
+        <!-- Fancybox -->
+        <link href="css/jquery.fancybox.css" rel="stylesheet">
             
-            <!-- Animate - necessary for Wow.js -->
-            <link href="css/animate.css" rel="stylesheet">
+        <!-- Animate - necessary for Wow.js -->
+        <link href="css/animate.css" rel="stylesheet">
             
-            <!-- Google Fonts -->
-            <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|Oranienbaum|PT+Serif:400italic" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|Oranienbaum|PT+Serif:400italic" rel="stylesheet">
             
-            <!-- Font Awesome Icons -->
-            <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.css" rel="stylesheet">
+        <!-- Font Awesome Icons -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.css" rel="stylesheet">
             
-            <!-- HTML5 -->
-            <!--[if lt IE 9]>
-            <script src="js/html5shiv.js"></script>
-            <script src="js/respond.min.js"></script>
-            <![endif]-->
             
-            <link rel="stylesheet" href="estilos.css" />
+        <link rel="stylesheet" href="estilos.css" />
 
-	</head>
-	<body data-spy="scroll" data-target=".navbar-collapse">
+    </head>
+    <body data-spy="scroll" data-target=".navbar-collapse">
 		<!-- ========== MENU START ========== -->
 		<div class="navbar navbar-fixed-top">
 			<div class="container">
@@ -127,10 +118,7 @@
         
         <div id="banner">
             <div class="slides-container">
-                <li><img src="images/banner1.jpg" class="bjqs"/></li>
-                <li><img src="images/banner2.jpg" class="bjqs"/></li>
-                <img src="images/banner3.jpg" alt="" />
-                <img src="images/banner4.jpg" alt="" />
+                <img id="fondo" src="images/banner1.jpg"/>
             </div>
             
             <div class="tint">
@@ -216,32 +204,14 @@ Desarrollamos sus ideas desde la creación, diseño y ejecución con nuestro Sta
                                             <div id="btn-2" class="boton-prueba">2</div>
                                             <div id="btn-3" class="boton-prueba">3</div>
                                             <div id="btn-4" class="boton-prueba">4</div>
-                                            <div id="btn-5" class="boton-prueba">5</div>
-                                            <div id="btn-6" class="boton-prueba">6</div>
-                                            <div id="btn-7" class="boton-prueba">7</div>
-                                            <div id="btn-8" class="boton-prueba">8</div>
-                                            <div id="btn-9" class="boton-prueba">9</div>
-                                            <div id="btn-10" class="boton-prueba">10</div>
-                                            <div id="btn-11" class="boton-prueba">11</div>
-                                            <div id="btn-12" class="boton-prueba">12</div>
-                                            <div id="btn-13" class="boton-prueba">13</div>
                                         </div>
                                         <div style="display: inline-block; text-align: center; width:100%; height:25px; margin-bottom: 50px;" id="menu-women">
                                             <div id="btn-1" class="boton-prueba">1</div>
                                             <div id="btn-2" class="boton-prueba">2</div>
                                             <div id="btn-3" class="boton-prueba">3</div>
-                                            <div id="btn-4" class="boton-prueba">4</div>
-                                            <div id="btn-5" class="boton-prueba">5</div>
-                                            <div id="btn-6" class="boton-prueba">6</div>
-                                            <div id="btn-7" class="boton-prueba">7</div>
-                                            <div id="btn-8" class="boton-prueba">8</div>
-                                            <div id="btn-9" class="boton-prueba">9</div>
-                                            <div id="btn-10" class="boton-prueba">10</div>
                                         </div>
                                         <div style="display: inline-block; text-align: center; width:100%; height:25px; margin-bottom: 25px;" id="menu-men">
-                                            <div id="btn-11" class="boton-prueba">1</div>
-                                            <div id="btn-12" class="boton-prueba">2</div>
-                                            <div id="btn-13" class="boton-prueba">3</div>
+                                            <div id="btn-4" class="boton-prueba">1</div>
                                         </div>
                                         <ul class="models" >
                                             <li class="mix mujer"><a class="fancybox" data-fancybox-group="group" href="images/Model/mujer/1.jpg" title=""><img src="images/Model/mujer/1.jpg" alt="" /></a></li>
@@ -571,17 +541,13 @@ maquillaje de esta nueva línea.</p>
 					</div>
 				</div>
                 
-                <?php
-
-if (!isset($_POST["submit"])) {
-  ?>
-  <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
+<form method="post" action="email.php">
 <div class="row wow flipInY" data-wow-delay="0.5s">
 	<div class="col-md-6 text-center">
 		<input type="text" name="from" class="form-control" placeholder="Nombre">
 	</div>
 	<div class="col-md-6 text-center">
-		<input type="text" name="subject" class="form-control" placeholder="Email">
+		<input type="text" name="email" class="form-control" placeholder="Email">
 	</div>
 </div>
 <div class="row wow flipInY" data-wow-delay="0.5s">
@@ -595,21 +561,6 @@ if (!isset($_POST["submit"])) {
 	</div>
 </div>
   </form>
-  <?php 
-} else {    
-
-  if (isset($_POST["submit"])) {
-    $from = $_POST["from"]; 
-    $subject = $_POST["subject"];
-    $message = $_POST["message"];
-    
-    $message = wordwrap($message, 70);
-    
-    mail("daniel.quinones@ingeniocontenido.co",$subject,$message,"From: $from\n");
-    echo "Gracias por contactarnos";
-  }
-}
-?>
                 <!--
 				<form role="form">
 					<div class="row wow flipInY" data-wow-delay="0.5s">
@@ -777,30 +728,30 @@ if (!isset($_POST["submit"])) {
                 $("#menu-women").hide();
                 $("#menu-men").css("visibility","visible");
                 $("#menu-men").show("slow");
-                Seleccion('btn-11');
+                Seleccion('btn-4');
                 $(".boton-prueba").removeClass('activo');
-                $('#btn-11').addClass('activo');
+                $('#btn-4').addClass('activo');
             });
             
             function Seleccion(val){
                 switch (val){
                     case 'btn-1':
                         inicio =0;
-                        fin = 5;
-                        break;
-                    case 'btn-2':
-                        inicio =6;
-                        fin = 11;
-                        break;
-                    case 'btn-3':
-                        inicio =12;
                         fin = 17;
                         break;
-                    case 'btn-4':
+                    case 'btn-2':
                         inicio =18;
-                        fin = 23;
+                        fin = 35;
                         break;
-                    case 'btn-5':
+                    case 'btn-3':
+                        inicio =36;
+                        fin = 54;
+                        break;
+                    case 'btn-4':
+                        inicio =55;
+                        fin = 70;
+                        break;
+                    /*case 'btn-5':
                         inicio =24;
                         fin = 29;
                         break;
@@ -835,7 +786,7 @@ if (!isset($_POST["submit"])) {
                     case 'btn-13':
                         inicio =67;
                         fin = 70;
-                        break;
+                        break;*/
                 }
                 
                 
@@ -848,6 +799,33 @@ if (!isset($_POST["submit"])) {
                     }
                });
             }
+            
+            $(document).ready(function(){
+                var loop = 0;
+                setInterval(function(){
+                    var imagen="images/banner1.jpg";
+                    switch(loop){
+                        case 0:
+                            imagen="images/banner1.jpg";
+                            break;
+                        case 1:
+                            imagen="images/banner2.jpg";
+                            break;
+                        case 2:
+                            imagen="images/banner3.jpg";
+                            break;
+                        case 3:
+                            imagen="images/banner4.jpg";
+                            break;
+                        default:
+                            imagen="images/banner1.jpg";
+                            break;
+                    }
+                    $('#fondo').attr('src',imagen);
+                    loop++;
+                    if(loop>3){ loop=0;}
+                }, 7000);
+            });
             
         </script>    
 	</body>

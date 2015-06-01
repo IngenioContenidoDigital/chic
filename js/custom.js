@@ -144,10 +144,10 @@ jQuery(document).ready(function($) {
     //  ==========
     //  = Add prettyPhoto for images with class .add-prettyphoto =
     //  ==========
-    $(".add-prettyphoto").prettyPhoto({
+   /* $(".add-prettyphoto").prettyPhoto({
         default_width: 720,
         default_height: 405
-    });
+    });*/
     //  ==========
     //  = Accordion group toggle classes =
     //  ==========
@@ -241,7 +241,7 @@ jQuery(document).ready(function($) {
     //  ========== 
     //  = Isotope = 
     //  ========== 
-    (function() {
+    /*(function() {
         var $container = $("#isotopeContainer");
     
         $container.imagesLoaded(function() {
@@ -364,14 +364,14 @@ jQuery(document).ready(function($) {
             });
             $("#isotopeSorting").trigger("change");
         });
-    })();
+    })();*/
 
 
 
     //  ========== 
     //  = Tour = 
     //  ========== 
-    (function() {
+   /* (function() {
         var tour = new Tour({
             useLocalStorage: true,
             backdrop: false
@@ -400,7 +400,7 @@ jQuery(document).ready(function($) {
             placement: "bottom"
         } ]);
         tour.start();
-    })();
+    })();*/
 
 
 
