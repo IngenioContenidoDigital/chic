@@ -114,7 +114,13 @@ ul.bjqs-controls.v-centered li a:hover{
 }
 
 .cliente img{
-    width:60px;
-    height:60px;
+    width:70px;
+    height:70px;
     margin: 10px;
+}
+
+.cliente img:hover{
+    transform: scale(1.5);
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
 }
